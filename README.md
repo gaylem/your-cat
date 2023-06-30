@@ -1,6 +1,6 @@
 # Tell me about your cat.
 
-I built this form for Codesmith workshop assignment using basic HTML and CSS. I've deployed it using Surge and am collecting the data via SheetDB.
+I built this form for Codesmith workshop assignment using basic HTML and CSS. I've deployed it using Surge and am collecting the data via SheetDB. The cat wallpaper I used is from [wallpapers.com](https://wallpapers.com/wallpapers/cute-cat-pattern-f52pyd5y7y9wk46z.html).
 
 https://tell-me-about-your-cat.surge.sh/your-cat.html
 
