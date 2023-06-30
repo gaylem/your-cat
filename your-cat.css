@@ -22,6 +22,7 @@ label {
 	display: flex;
 	align-items: left;
 	justify-items: flex-start;
+	justify-content: space-evenly;
 	flex-direction: column;
 	background: white;
 	padding: 60px;
@@ -54,8 +55,13 @@ h1 {
 	margin: 0 0 20px 0;
 }
 
-.small-box {
-	display: flex;
+#please {
+	font-style: italic;
+	text-align: center;
+	border: 3px dotted black;
+	padding: 20px;
+	font-size: 16px;
+	margin: 20px;
 }
 
 hr {
@@ -73,6 +79,11 @@ textarea {
 	margin: 5px 0 0 0;
 }
 
+#date-label,
+#cat-desc-label {
+	margin-top: 10px;
+}
+
 .treats {
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -88,13 +99,14 @@ textarea {
 	padding-top: 20px;
 }
 
-#please {
-	font-style: italic;
-	text-align: center;
-	border: 3px dotted black;
-	padding: 20px;
-	font-size: 16px;
-	margin: 20px;
+#date {
+	width: 175px;
+}
+
+#color {
+	padding: 0;
+	background-color: white;
+	border: none;
 }
 
 .fave-food {
@@ -116,6 +128,10 @@ input[type='checkbox'] {
 	float: left;
 	vertical-align: middle;
 	margin-right: 10px;
+}
+
+select {
+	background: rgb(246, 209, 215);
 }
 
 .textbox {

@@ -15,11 +15,12 @@
       <hr>
       <p id="please">If you have more than one cat, please fill out a separate form for each one.</p>
       <form id="survey-form" action="https://sheetdb.io/api/v1/oll26xfnnbenh" method="post">
-        <label id="name-label">Your name</label><input class="small-box" id="your-name" type="text" name="humanName" required/>
-        <label id="cat-name-label">Your cat's name</label><input class="small-box" id="cat-name" type="text" name="catName"required/>
-        <label id="email-label">Your email</label><input class="small-box" id="email" type="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required /></label>
+        <label id="name-label" for="humanName">Your name *</label><input class="small-box" id="your-name" type="text" name="humanName" required/>
+        <label id="cat-name-label" for="catName">Your cat's name *</label><input class="small-box" id="cat-name" type="text" name="catName"required/>
+        <label id="email-label" for="email">Your email *</label><input class="small-box" id="email" type="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required /></label>
+        <label id="date-label" for="date">Your cat's birthday or "gotchya day"</label> <input id="date" type="date" name="date">
         <div class="fave-food">
-        <label>What is your cat's favorite food?
+        <label for="faveCatFood">What is your cat's favorite food?
           <select id="dropdown" name="faveCatFood">
             <option>(Choose option)</option>
             <option>Meow Mix</option>
@@ -43,7 +44,8 @@
             <label id="radio" for="both">Both</label><br>
         </div>
         <div class="cat-description">
-          <label for="catDescription">What does your cat look like?</label>
+          <label id="color-label" for="color">What color is your cat? (Click the box below to pick.)</label><input id="color" name="catColor" type="color" value="#F6D1D7">
+          <label id="cat-desc-label" for="catDescription">What does your cat look like?</label>
           <textarea class="textbox" type="textarea" name="catDescription"></textarea>
         </div>
         <div class="story">
@@ -56,6 +58,7 @@
         </div>
         <input type="submit" id="submit" value="Submit">
         <p id="agreement">By clicking submit, you promise to love your kitty and give them the best care you can.</p>
+        <p>* Required field</p>
     </form>
     </div>
   </body>
