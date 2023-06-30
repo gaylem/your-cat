@@ -59,4 +59,18 @@
     </form>
     </div>
   </body>
+  <script>
+  var form = document.getElementById('survey-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("survey-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      window.location.href = "https://www.youtube.com/watch?v=ds-2_YySL9o"
+    });
+  });
+</script>
 </html>
