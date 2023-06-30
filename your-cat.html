@@ -15,8 +15,15 @@
 			<hr />
 			<p id="please">If you have more than one cat, please fill out a separate form for each one.</p>
 			<form id="survey-form" action="https://sheetdb.io/api/v1/oll26xfnnbenh" method="post">
-				<label id="name-label" for="your-name">Your name *</label><input class="small-box" id="your-name" type="text" name="humanName" required /> <label id="cat-name-label" for="catName">Your cat's name *</label><input class="small-box" id="cat-name" type="text" name="catName" required />
-				<label id="email-label" for="email">Your email *</label><input class="small-box" id="email" type="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required /> <label id="date-label" for="date">Your cat's birthday or "gotchya day"</label>
+				<div class="required-fields">
+					<label id="name-label" for="your-name">Your name *</label>
+					<input class="small-box" id="your-name" type="text" name="humanName" required />
+					<label id="cat-name-label" for="catName">Your cat's name *</label>
+					<input class="small-box" id="cat-name" type="text" name="catName" required />
+					<label id="email-label" for="email">Your email *</label>
+					<input class="small-box" id="email" type="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required />
+				</div>
+				<label id="date-label" for="date">Your cat's birthday or "gotchya day"</label>
 				<input id="date" type="date" name="date" />
 				<div class="fave-food">
 					<label for="dropdown"

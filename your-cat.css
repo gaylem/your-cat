@@ -25,15 +25,15 @@ label {
 	justify-content: space-evenly;
 	flex-direction: column;
 	background: white;
-	padding: 60px;
+	padding: 70px;
 	max-width: 700px;
 	margin: auto;
 }
 
-form {
+form,
+.required-fields {
 	display: flex;
 	flex-direction: column;
-	padding: 10px;
 }
 
 h1,
