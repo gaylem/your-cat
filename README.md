@@ -1,14 +1,12 @@
 # Tell me about your cat.
 
-I built this form for Codesmith workshop assignment using basic HTML and CSS. I've deployed it using Surge and am collecting the data via SheetDB.
+I built this form for Codesmith workshop assignment using basic HTML and CSS. I've deployed it using Surge and am collecting the data via SheetDB. The cat wallpaper I used is from [wallpapers.com](https://wallpapers.com/wallpapers/cute-cat-pattern-f52pyd5y7y9wk46z.html).
 
-https://tell-me-about-your-cat.surge.sh/
+https://tell-me-about-your-cat.surge.sh/your-cat.html
 
 The assignment instructions are below.
 
 # Build With Code - Webforms, Persistent Storage, and Deployment Workshop
-
-**Note**: _At the top right of this window, select “Open Preview” to see the formatted version of this README._
 
 ## Overview:
 
@@ -24,9 +22,7 @@ Before we get started, we’ll need to “Fork” this repository/project. The a
 2. You may be prompted to log in or create a Repl account - follow the instructions on your screen.
 3. A dialog box should popup, where you can name the repository and add a description. Rename it to include your own name, and then click “Fork Repl”
 
-You’ll notice your repo’s name and your username will be displayed on the top left:
-
-![Repl Image](./assets/repl_img.png)
+You’ll notice your repo’s name and your username will be displayed on the top left.
 
 ## Challenge 2: Build Your HTML Form
 
@@ -54,21 +50,15 @@ SheetDB can take our Form Inputs and store them in a Google Sheet (similar to Ex
 
 1. Navigate to https://www.sheetdb.io/
 2. Select “Log In Using Google Account”
-   ![Login Image](./assets/sheetdb_login.png)
 3. After completing log-in, select “Create new API”
-   ![New API Image](./assets/sheetdb_new_api.png)
 4. On the pop-up, select “Create new spreadsheet” and enter a name for your spreadsheet, then click “Create”.
-   ![New Sheet Image](./assets/sheetdb_create_new_sheet.png)
 5. On the next screen, enter the names of the inputs from your HTML Form(first_name, last_name, message) as columns in your spreadsheet. Then click “Create”
-   ![Columns Image](./assets/sheetdb_columns.png)
 
 ## Challenge 4: Connect to SheetDB
 
 Once you’ve set up your account following the steps above, you should see your Spreadsheet dashboard. Note the API Endpoint URL for sending data, as well as the Google Docs URL so that you can view the data in your spreadsheet.
 
 - Modify your HTML Form to send data to SheetDB. Feel free to use the W3Schools documentation referenced above to guide you through the process.
-
-![API Image](./assets/sheetdb_api.png)
 
 After you’ve successfully connected to your sheet, you should see the Form inputs appearing in the Google Sheet after each submission.
 
