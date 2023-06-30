@@ -63,8 +63,8 @@
     </div>
   </body>
   <script>
-  var form = document.getElementById('survey-form');
-  form.addEventListener("submit", e => {ß
+  let form = document.getElementById('survey-form');
+  form.addEventListener("submit", e => {
     e.preventDefault();
     fetch(form.action, {
         method : "POST",
