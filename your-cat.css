@@ -81,7 +81,7 @@ textarea {
 
 #date-label,
 #cat-desc-label {
-	margin-top: 10px;
+	margin-top: 5px;
 }
 
 .treats {
@@ -107,10 +107,12 @@ textarea {
 	padding: 0;
 	background-color: white;
 	border: none;
+	margin-bottom: 5px;
 }
 
 .fave-food {
-	padding-top: 30px;
+	padding-top: 40px;
+	padding-bottom: 20px;
 }
 
 .sweet-spicy label {
@@ -156,5 +158,10 @@ select {
 @media (max-width: 650px) {
 	body {
 		background: white;
+	}
+
+	h1,
+	#description {
+		text-align: center;
 	}
 }
