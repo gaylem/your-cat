@@ -54,17 +54,17 @@
         </div>
         <div class="treats">
           <input type="checkbox" id="treats" value="checked" name="treatsToday" />
-          <label id="treats-label" for="treats">Please give your cat a scritch or a treat from me and check this box to confirm you've completed your mission.</label>
+          <label id="treats-label" for="treats">Please give your cat a treat and check this box to confirm you've completed your mission.</label>
         </div>
         <input type="submit" id="submit" value="Submit">
-        <p id="agreement">By clicking submit, you promise to love your kitty and give them the best care you can.</p>
-        <p>* Required field</p>
+        <p id="agreement">By clicking submit, you promise to love your kitty forever and ever.</p>
+        <p id="required">* Required field</p>
     </form>
     </div>
   </body>
   <script>
   var form = document.getElementById('survey-form');
-  form.addEventListener("submit", e => {
+  form.addEventListener("submit", e => {ß
     e.preventDefault();
     fetch(form.action, {
         method : "POST",
