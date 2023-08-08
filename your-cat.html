@@ -1,85 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="your-cat.css" />
-		<title>Tell me about your cat.</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="your-cat.css" />
+    <title>Tell me about your cat.</title>
+  </head>
 
-	<body>
-		<div id="form-container">
-			<h1 id="title">Tell Me About Your Cat</h1>
-			<p id="description">I would really like to know about your cat.</p>
-			<hr />
-			<p id="please">If you have more than one cat, please fill out a separate form for each one.</p>
-			<form id="survey-form" action="https://sheetdb.io/api/v1/oll26xfnnbenh" method="post">
-				<div class="required-fields">
-					<label id="name-label" for="your-name">Your name *</label>
-					<input class="small-box" id="your-name" type="text" name="humanName" required />
-					<label id="cat-name-label" for="catName">Your cat's name *</label>
-					<input class="small-box" id="cat-name" type="text" name="catName" required />
-					<label id="email-label" for="email">Your email *</label>
-					<input class="small-box" id="email" type="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required />
-				</div>
-				<label id="date-label" for="date">Your cat's birthday or "gotchya day"</label>
-				<input id="date" type="date" name="date" />
-				<div class="fave-food">
-					<label for="dropdown"
-						>What is your cat's favorite food?
-						<select id="dropdown" name="faveCatFood">
-							<option>(Choose option)</option>
-							<option>Meow Mix</option>
-							<option>Fancy Feast</option>
-							<option>Purina</option>
-							<option>IAMS</option>
-							<option>Healthy shit</option>
-							<option>Human souls</option>
-							<option>Other</option>
-						</select>
-					</label>
-				</div>
-				<div class="sweet-spicy">
-					<p>Is your cat's personality sweet, spicy, or both?</p>
-					<input type="radio" class="radio" id="sweet" name="personality" value="sweet" />
-					<label id="radio" for="sweet">Sweet</label><br />
-					<input type="radio" class="radio" id="spicy" name="personality" value="spicy" />
-					<label id="radio" for="spicy">Spicy</label><br />
-					<input type="radio" class="radio" id="both" name="personality" value="both" />
-					<label id="radio" for="both">Both</label><br />
-				</div>
-				<div class="cat-description">
-					<label id="color-label" for="color">What color is your cat? (Click the box below to pick.)</label><input id="color" name="catColor" type="color" value="#F6D1D7" />
-					<label id="cat-desc-label" for="cat-desc">Describe your cat's appearance.</label>
-					<textarea class="textbox" type="textarea" id="cat-desc" name="catDescription"></textarea>
-				</div>
-				<div class="story">
-					<label for="cat-story">Tell me a funny or sweet story about your cat. Or just tell me what you love about them.</label>
-					<textarea class="textbox" type="textarea" id="cat-story" name="catStory"></textarea>
-				</div>
-				<div class="treats">
-					<input type="checkbox" id="treats" value="checked" name="treatsToday" />
-					<label id="treats-label" for="treats">Please give your cat a treat and check this box to confirm you've completed your mission.</label>
-				</div>
-				<input type="submit" id="submit" value="Submit" />
-				<p id="agreement">By clicking submit, you promise to love your kitty forever and ever.</p>
-				<p id="required">* Required field</p>
-			</form>
-		</div>
-	</body>
-	<script>
-		let form = document.getElementById('survey-form');
-		form.addEventListener('submit', e => {
-			e.preventDefault();
-			fetch(form.action, {
-				method: 'POST',
-				body: new FormData(document.getElementById('survey-form')),
-			})
-				.then(response => response.json())
-				.then(html => {
-					window.location.href = 'https://www.youtube.com/watch?v=ds-2_YySL9o';
-				});
-		});
-	</script>
+  <body>
+    <div id="form-container">
+      <h1 id="title">Tell Me About Your Cat</h1>
+      <p id="description">I would really like to know about your cat.</p>
+      <hr />
+      <p id="please">
+        If you have more than one cat, please fill out a separate form for each
+        one.
+      </p>
+      <form
+        id="survey-form"
+        action="https://sheetdb.io/api/v1/oll26xfnnbenh"
+        method="post">
+        <div class="required-fields">
+          <label id="name-label" for="your-name">Your name *</label>
+          <input
+            class="small-box"
+            id="your-name"
+            type="text"
+            name="humanName"
+            required />
+          <label id="cat-name-label" for="catName">Your cat's name *</label>
+          <input
+            class="small-box"
+            id="cat-name"
+            type="text"
+            name="catName"
+            required />
+          <label id="email-label" for="email">Your email *</label>
+          <input
+            class="small-box"
+            id="email"
+            type="email"
+            name="email"
+            pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+            required />
+        </div>
+        <label id="date-label" for="date"
+          >Your cat's birthday or "gotchya day"</label
+        >
+        <input id="date" type="date" name="date" />
+        <div class="fave-food">
+          <label for="dropdown"
+            >What is your cat's favorite food?
+            <select id="dropdown" name="faveCatFood">
+              <option>(Choose option)</option>
+              <option>Meow Mix</option>
+              <option>Fancy Feast</option>
+              <option>Purina</option>
+              <option>IAMS</option>
+              <option>Healthy shit</option>
+              <option>Human souls</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+        <div class="sweet-spicy">
+          <p>Is your cat's personality sweet, spicy, or both?</p>
+          <input
+            type="radio"
+            class="radio"
+            id="sweet"
+            name="personality"
+            value="sweet" />
+          <label id="radio" for="sweet">Sweet</label><br />
+          <input
+            type="radio"
+            class="radio"
+            id="spicy"
+            name="personality"
+            value="spicy" />
+          <label id="radio" for="spicy">Spicy</label><br />
+          <input
+            type="radio"
+            class="radio"
+            id="both"
+            name="personality"
+            value="both" />
+          <label id="radio" for="both">Both</label><br />
+        </div>
+        <div class="cat-description">
+          <label id="color-label" for="color"
+            >What color is your cat? (Click the box below to pick.)</label
+          ><input id="color" name="catColor" type="color" value="#F6D1D7" />
+          <label id="cat-desc-label" for="cat-desc"
+            >Describe your cat's appearance.</label
+          >
+          <textarea
+            class="textbox"
+            type="textarea"
+            id="cat-desc"
+            name="catDescription"></textarea>
+        </div>
+        <div class="story">
+          <label for="cat-story"
+            >Tell me a funny or sweet story about your cat. Or just tell me what
+            you love about them.</label
+          >
+          <textarea
+            class="textbox"
+            type="textarea"
+            id="cat-story"
+            name="catStory"></textarea>
+        </div>
+        <div class="treats">
+          <input
+            type="checkbox"
+            id="treats"
+            value="checked"
+            name="treatsToday" />
+          <label id="treats-label" for="treats"
+            >Please give your cat a treat and check this box to confirm you've
+            completed your mission.</label
+          >
+        </div>
+        <input type="submit" id="submit" value="Submit" />
+        <p id="agreement">
+          By clicking submit, you promise to love your kitty forever and ever.
+        </p>
+        <p id="required">* Required field</p>
+      </form>
+    </div>
+  </body>
+  <script>
+    let form = document.getElementById('survey-form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(document.getElementById('survey-form')),
+      })
+        .then(response => response.json())
+        .then(html => {
+          window.location.href = 'https://www.youtube.com/watch?v=ds-2_YySL9o';
+        });
+    });
+  </script>
 </html>
