@@ -13,4 +13,9 @@ jobs:
         with:
           node-version: 18.16.0
       - run: npm install -g surge
+      - name: Debug Info
+        run: |
+          echo "Surge Domain: ${{ secrets.SURGE_DOMAIN }}"
+          echo "Surge Token: ${{ secrets.SURGE_TOKEN }}"
       - run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+
